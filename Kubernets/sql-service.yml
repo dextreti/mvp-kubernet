@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sql-service
+  labels:
+    name: sql-service
+    app: app
+spec:
+  type: NodePort
+  ports:
+    - port: 1433
+      targetPort: 1433
+      nodePort: 31433
+  selector:
+    app: app
+    name: sql-pod

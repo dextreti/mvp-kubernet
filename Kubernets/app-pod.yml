@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-pod
+  labels:
+      app: app
+      type: mvc
+spec:
+  containers: 
+    - name: app-mvc
+      image: dextre78/mvc-prototipos:v1.0
+      ports: 
+        - containerPort: 80
+      env:
+        - name: ConnectionStrings__ContextoCurso
+          value: Data Source=sql-service;Initial Catalog=dockerdb;user id=sa;password=31682667@SQL.com.pe;TrustServerCertificate=True

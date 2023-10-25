@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sql-deploy
+  labels: 
+    name: sql-deploy
+    app: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+      name: sql-pod
+  template:
+    metadata:
+      name: sql-pod
+      labels:
+          app: app
+          name: sql-pod
+    spec:
+      containers: 
+        - name: sql
+          image: mcr.microsoft.com/mssql/server
+          ports: 
+            - containerPort: 1433
+          env:
+            - name: ACCEPT_EULA
+              value: "Y"
+            - name: SA_PASSWORD
+              value: "31682667@SQL.com.pe"    
+
+
