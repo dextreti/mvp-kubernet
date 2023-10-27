@@ -27,6 +27,6 @@ spec:
             - name: ACCEPT_EULA
               value: "Y"
             - name: SA_PASSWORD
-              value: "31682667@SQL.com.pe"    
+              value: "123456@SQL.com.pe"    
 
 

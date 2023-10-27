@@ -25,4 +25,4 @@ spec:
             - containerPort: 80
           env:
             - name: ConnectionStrings__ContextoCurso
-              value: Data Source=sql-service;Initial Catalog=dockerdb;user id=sa;password=31682667@SQL.com.pe;TrustServerCertificate=True
+              value: Data Source=sql-service;Initial Catalog=dockerdb;user id=sa;password=123456@SQL.com.pe;TrustServerCertificate=True
